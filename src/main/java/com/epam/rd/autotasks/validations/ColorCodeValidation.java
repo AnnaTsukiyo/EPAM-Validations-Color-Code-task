@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class EpamEmailValidation {
+public class ColorCodeValidation {
     public static boolean validateColorCode(String color) {
         String expression = "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$";
         Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
@@ -43,3 +43,8 @@ public class EpamEmailValidation {
         }
     }
 }
+
+
+
+
+
