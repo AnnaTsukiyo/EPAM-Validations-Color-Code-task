@@ -10,7 +10,7 @@ public class ColorCodeValidation {
         Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(color);
         if (color == null || color.isEmpty() || " ".equals(color) || "".equals(color)) {
-            return false;
+            return Boolean.parseBoolean(null);
         }
         return matcher.matches();
     }
