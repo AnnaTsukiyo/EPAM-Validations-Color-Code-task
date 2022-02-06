@@ -9,12 +9,10 @@ public class ColorCodeValidation {
         String expression = "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$";
         Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(color);
-        if (color == null || color.isEmpty() || " ".equals(color) || "".equals(color)) {
-            return Boolean.parseBoolean(null);
-        }
+        if (color == null || color.isEmpty() || color.isBlank())
+            return false;
         return matcher.matches();
     }
-
 
     public static void main(String args[]) {
         String first = "123456";
